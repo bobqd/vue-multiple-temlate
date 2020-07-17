@@ -24,10 +24,10 @@ module.exports = {
         1 或’warn’： 打开规则，并且作为一个警告，字体颜色为黄色（并不会导致检查不通过）。
         2 或’error’：打开规则，并且作为一个错误 ，色体颜色为红色(退出码为1，检查不通过)。
         */
-        "no-alert": process.env.NODE_ENV === 'production' ? 'error' : 'off',//禁止使用alert confirm prompt
+        "no-alert": process.env.NODE_ENV === 'production' ? 'warn' : 'off',//禁止使用alert confirm prompt
         "no-catch-shadow": 2,//禁止catch子句参数与外部作用域变量同名
         "no-class-assign": 2,//禁止给类赋值
-        "no-console": process.env.NODE_ENV === 'production' ? 'error' : 'off',//禁止使用console
+        "no-console": process.env.NODE_ENV === 'production' ? 'warn' : 'off',//禁止使用console
         "no-const-assign": 2,//禁止修改const声明的变量
         "no-debugger": process.env.NODE_ENV === 'production' ? 'error' : 'off',//禁止使用debugger
         "no-delete-var": 2,//不能对var声明的变量使用delete操作符
@@ -58,7 +58,7 @@ module.exports = {
         "no-shadow": 2,//外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
         "no-spaced-func": 2,//函数调用时 函数名与()之间不能有空格
         "no-sparse-arrays": 2,//禁止稀疏数组， [1,,2]
-        "no-trailing-spaces": 1,//一行结束后面不要有空格
+        "no-trailing-spaces": 0,//一行结束后面不要有空格
         "no-undef": 1,//不能有未定义的变量
         "no-undef-init": 2,//变量初始化时不能直接给它赋值为undefined
         "no-unreachable": 2,//不能有无法执行的代码
@@ -74,8 +74,8 @@ module.exports = {
         "consistent-this": [2, "that"],//this别名
         "curly": [2, "all"],//必须使用 if(){} 中的{}
         "default-case": 2,//switch语句最后必须有default
-        "eqeqeq": 2,//必须使用全等
-        "new-cap": 2,//函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
+        "eqeqeq": 0,//必须使用全等
+        "new-cap": 0,//函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
         "new-parens": 2,//new时必须加小括号
         "newline-after-var": 2,//变量声明后是否需要空一行
         "quotes": [1, "single"],//引号类型 `` "" ''
